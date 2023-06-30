@@ -1,0 +1,51 @@
+{
+  "name": "trymore",
+  "author": "Arth",
+  "version": "0.0.1",
+  "description": "This function helps you handle errors in a flexible and customizable way, allowing you to retry operations by passing a new callback to the trymore() method.",
+  "types": "./types/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./types/index.d.ts"
+    }
+  },
+  "files": [
+    "/dist",
+    "/types",
+    "/README.md"
+  ],
+  "scripts": {
+    "test": "tsup && node ./test/index.js",
+    "prettier": "prettier --write . && prettier --check .",
+    "build": "rm -rf dist && tsup && prettier --write . &&  prettier --check . && eslint ./ --fix --format=pretty"
+  },
+  "keywords": [
+    "retry",
+    "error_handling",
+    "callback",
+    "flexible",
+    "customizable",
+    "integration",
+    "trymore"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4i8/trymore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/4i8/trymore/issues"
+  },
+  "homepage": "https://github.com/4i8/trymore#readme",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^18.16.14",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "prettier": "^2.8.4",
+    "tsup": "^6.6.3"
+  }
+}
